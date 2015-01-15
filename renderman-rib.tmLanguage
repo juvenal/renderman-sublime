@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>rib</string>
+	</array>
+	<key>name</key>
+	<string>Renderman RIB</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>rsl storage types</string>
+			<key>match</key>
+			<string>\b(color|vector|point|normal|shader|matrix|string)\b</string>
+			<key>name</key>
+			<string>storage.type.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>rsl storage modifiers</string>
+			<key>match</key>
+			<string>\b(output|constant|uniform|varying|public)\b</string>
+			<key>name</key>
+			<string>storage.modifier.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>rsl surface shader global variables</string>
+			<key>match</key>
+			<string>\b(Cs|Os|P|dPd(u|v)|N(|g)|u|v|du|dv|s|t|E|I|ncomps|time|dtime|dPdtime|Ci|Oi|L|Cl|Ol)\b</string>
+			<key>name</key>
+			<string>support.variable.surface.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>rsl light shader global variables</string>
+			<key>match</key>
+			<string>\b(P|dPd(u|v)|N(|g)|u|v|du|dv|s|t|L|Ps|E|ncomps|time|dtime|I|Cl|Ol)\b</string>
+			<key>name</key>
+			<string>support.variable.light.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>rsl volume shader global variables</string>
+			<key>match</key>
+			<string>\b(P|I|E|dPd(u|v)|N(|g)|u|v|du|dv|s|t|ncomps|time|dtime|Ci|Oi)\b</string>
+			<key>name</key>
+			<string>support.variable.volume.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>rsl displacement shader global variables</string>
+			<key>match</key>
+			<string>\b(P|dPd(u|v)|N(|g)|I|E|u|v|du|dv|s|t|ncomps|time|dtime|dPdtime|)\b</string>
+			<key>name</key>
+			<string>support.variable.displacement.sl</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.rib</string>
+	<key>uuid</key>
+	<string>ee7f947e-de76-4221-863e-7d8cd0cd94b4</string>
+</dict>
+</plist>

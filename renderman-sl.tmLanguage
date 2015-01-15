@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>sl</string>
+	</array>
+	<key>name</key>
+	<string>Renderman SL</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>RSL storage types</string>
+			<key>match</key>
+			<string>\b(color|vector|point|normal|shader|matrix|string)\b</string>
+			<key>name</key>
+			<string>storage.type.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL storage modifiers</string>
+			<key>match</key>
+			<string>\b(output|constant|uniform|varying|public)\b</string>
+			<key>name</key>
+			<string>storage.modifier.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL surface shader global variables</string>
+			<key>match</key>
+			<string>\b(Cs|Os|P|dPd(u|v)|N(|g)|u|v|du|dv|s|t|E|I|ncomps|time|dtime|dPdtime|Ci|Oi|L|Cl|Ol)\b</string>
+			<key>name</key>
+			<string>support.variable.surface.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL light shader global variables</string>
+			<key>match</key>
+			<string>\b(P|dPd(u|v)|N(|g)|u|v|du|dv|s|t|L|Ps|E|ncomps|time|dtime|I|Cl|Ol)\b</string>
+			<key>name</key>
+			<string>support.variable.light.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL volume shader global variables</string>
+			<key>match</key>
+			<string>\b(P|I|E|dPd(u|v)|N(|g)|u|v|du|dv|s|t|ncomps|time|dtime|Ci|Oi)\b</string>
+			<key>name</key>
+			<string>support.variable.volume.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL displacement shader global variables</string>
+			<key>match</key>
+			<string>\b(P|dPd(u|v)|N(|g)|I|E|u|v|du|dv|s|t|ncomps|time|dtime|dPdtime|)\b</string>
+			<key>name</key>
+			<string>support.variable.displacement.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL internal functions</string>
+			<key>match</key>
+			<string>\b(illumin(ate|ance)|solar|ambient|diffuse|specular(|brdf)|phong|trace)\b</string>
+			<key>name</key>
+			<string>support.function.internal.light.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL shader types</string>
+			<key>match</key>
+			<string>\b(surface|displacement|light|volume|imager)\b</string>
+			<key>name</key>
+			<string>entity.name.shaders.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL internal math functions</string>
+			<key>match</key>
+			<string>\b(radians|degrees|PI|(a|)sin|(a|)cos|(a|)tan|pow|exp|(inverse|)sqrt|log|mod|abs|sign|min|max|clamp|floor|ceil|round|random)\b</string>
+			<key>name</key>
+			<string>support.function.internal.math.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL internal shader operation functions</string>
+			<key>match</key>
+			<string>\b((smooth|filter|)step|spline|D(u|v)|Deriv|(p|cell|)noise)\b</string>
+			<key>name</key>
+			<string>support.function.internal.steps.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL internal shader geometric functions</string>
+			<key>match</key>
+			<string>\b(((set|)x|(set|)y|(set|)z)comp|length|normalize|distance|ptlined|rotate|area|faceforward|reflect|refract|fresnel|(v|n|)transform|depth|calculatenormal)\b</string>
+			<key>name</key>
+			<string>support.function.internal.geometry.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL internal shader color functions</string>
+			<key>match</key>
+			<string>\b((set|)comp|mix|ctransform|)\b</string>
+			<key>name</key>
+			<string>support.function.internal.color.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL internal shader matrix functions</string>
+			<key>match</key>
+			<string>\b(determinant|translate|rotate|scale)\b</string>
+			<key>name</key>
+			<string>support.function.internal.matrix.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL internal shader texture functions</string>
+			<key>match</key>
+			<string>\b(texture(|info)|environment|shadow)\b</string>
+			<key>name</key>
+			<string>support.function.internal.texture.sl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>RSL internal shader message passing functions</string>
+			<key>match</key>
+			<string>\b(atmosphere|displacement|lightsource|surface|incident|opposite|attribute|option|rendererinfo|shadername)\b</string>
+			<key>name</key>
+			<string>support.function.internal.message.sl</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>source.c</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.sl</string>
+	<key>uuid</key>
+	<string>59691071-d786-4d58-8341-02f7d8f3bc6c</string>
+</dict>
+</plist>

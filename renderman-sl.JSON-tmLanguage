@@ -1,0 +1,35 @@
+// [PackageDev] target_format: plist, ext: tmLanguage
+
+{ "name": "Renderman SL",
+  "scopeName": "source.sl",
+  "fileTypes": ["sl"],
+  "uuid": "59691071-d786-4d58-8341-02f7d8f3bc6c",
+  
+  "patterns": [
+    { "include": "source.c++"},
+    { "match": "\\b(color|vector|point|normal|shader|matrix|string)\\b",
+      "name": "storage.type.sl",
+      "comment": "rsl storage types"
+    },
+    { "match": "\\b(output|constant|uniform|varying|public)\\b",
+      "name": "storage.modifier.sl",
+      "comment": "rsl storage modifiers"
+    },
+    { "match": "\\b(Cs|Os|P|dPd(u|v)|N(|g)|u|v|du|dv|s|t|E|I|ncomps|time|dtime|dPdtime|Ci|Oi|L|Cl|Ol)\\b",
+      "name": "support.variable.surface.sl",
+      "comment": "rsl surface shader global variables"
+    },
+    { "match": "\\b(P|dPd(u|v)|N(|g)|u|v|du|dv|s|t|L|Ps|E|ncomps|time|dtime|I|Cl|Ol)\\b",
+      "name": "support.variable.light.sl",
+      "comment": "rsl light shader global variables"
+    },
+    { "match": "\\b(P|I|E|dPd(u|v)|N(|g)|u|v|du|dv|s|t|ncomps|time|dtime|Ci|Oi)\\b",
+      "name": "support.variable.volume.sl",
+      "comment": "rsl volume shader global variables"
+    },
+    { "match": "\\b(P|dPd(u|v)|N(|g)|I|E|u|v|du|dv|s|t|ncomps|time|dtime|dPdtime|)\\b",
+      "name": "support.variable.displacement.sl",
+      "comment": "rsl displacement shader global variables"
+    }
+  ]
+}

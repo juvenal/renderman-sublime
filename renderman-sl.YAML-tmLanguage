@@ -1,0 +1,55 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Renderman SL
+scopeName: source.sl
+fileTypes: [sl]
+uuid: 59691071-d786-4d58-8341-02f7d8f3bc6c
+
+patterns:
+- comment: RSL storage types
+  match: \b(color|vector|point|normal|shader|matrix|string)\b
+  name: storage.type.sl
+- comment: RSL storage modifiers
+  match: \b(output|constant|uniform|varying|public)\b
+  name: storage.modifier.sl
+- comment: RSL surface shader global variables
+  match: \b(Cs|Os|P|dPd(u|v)|N(|g)|u|v|du|dv|s|t|E|I|ncomps|time|dtime|dPdtime|Ci|Oi|L|Cl|Ol)\b
+  name: support.variable.surface.sl
+- comment: RSL light shader global variables
+  match: \b(P|dPd(u|v)|N(|g)|u|v|du|dv|s|t|L|Ps|E|ncomps|time|dtime|I|Cl|Ol)\b
+  name: support.variable.light.sl
+- comment: RSL volume shader global variables
+  match: \b(P|I|E|dPd(u|v)|N(|g)|u|v|du|dv|s|t|ncomps|time|dtime|Ci|Oi)\b
+  name: support.variable.volume.sl
+- comment: RSL displacement shader global variables
+  match: \b(P|dPd(u|v)|N(|g)|I|E|u|v|du|dv|s|t|ncomps|time|dtime|dPdtime|)\b
+  name: support.variable.displacement.sl
+- comment: RSL internal functions
+  match: \b(illumin(ate|ance)|solar|ambient|diffuse|specular(|brdf)|phong|trace)\b
+  name: support.function.internal.light.sl
+- comment: RSL shader types
+  match: \b(surface|displacement|light|volume|imager)\b
+  name: entity.name.shaders.sl
+- comment: RSL internal math functions
+  match: \b(radians|degrees|PI|(a|)sin|(a|)cos|(a|)tan|pow|exp|(inverse|)sqrt|log|mod|abs|sign|min|max|clamp|floor|ceil|round|random)\b
+  name: support.function.internal.math.sl
+- comment: RSL internal shader operation functions
+  match: \b((smooth|filter|)step|spline|D(u|v)|Deriv|(p|cell|)noise)\b
+  name: support.function.internal.steps.sl
+- comment: RSL internal shader geometric functions
+  match: \b(((set|)x|(set|)y|(set|)z)comp|length|normalize|distance|ptlined|rotate|area|faceforward|reflect|refract|fresnel|(v|n|)transform|depth|calculatenormal)\b
+  name: support.function.internal.geometry.sl
+- comment: RSL internal shader color functions
+  match: \b((set|)comp|mix|ctransform|)\b
+  name: support.function.internal.color.sl
+- comment: RSL internal shader matrix functions
+  match: \b(determinant|translate|rotate|scale)\b
+  name: support.function.internal.matrix.sl
+- comment: RSL internal shader texture functions
+  match: \b(texture(|info)|environment|shadow)\b
+  name: support.function.internal.texture.sl
+- comment: RSL internal shader message passing functions
+  match: \b(atmosphere|displacement|lightsource|surface|incident|opposite|attribute|option|rendererinfo|shadername)\b
+  name: support.function.internal.message.sl
+- include: source.c
+...

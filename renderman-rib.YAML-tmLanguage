@@ -1,0 +1,27 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Renderman RIB
+scopeName: source.rib
+fileTypes: [rib]
+uuid: ee7f947e-de76-4221-863e-7d8cd0cd94b4
+
+patterns:
+- comment: RSL storage types
+  match: \b(color|vector|point|normal|shader|matrix|string)\b
+  name: storage.type.sl
+- comment: RSL storage modifiers
+  match: \b(output|constant|uniform|varying|public)\b
+  name: storage.modifier.sl
+- comment: RSL surface shader global variables
+  match: \b(Cs|Os|P|dPd(u|v)|N(|g)|u|v|du|dv|s|t|E|I|ncomps|time|dtime|dPdtime|Ci|Oi|L|Cl|Ol)\b
+  name: support.variable.surface.sl
+- comment: RSL light shader global variables
+  match: \b(P|dPd(u|v)|N(|g)|u|v|du|dv|s|t|L|Ps|E|ncomps|time|dtime|I|Cl|Ol)\b
+  name: support.variable.light.sl
+- comment: RSL volume shader global variables
+  match: \b(P|I|E|dPd(u|v)|N(|g)|u|v|du|dv|s|t|ncomps|time|dtime|Ci|Oi)\b
+  name: support.variable.volume.sl
+- comment: RSL displacement shader global variables
+  match: \b(P|dPd(u|v)|N(|g)|I|E|u|v|du|dv|s|t|ncomps|time|dtime|dPdtime|)\b
+  name: support.variable.displacement.sl
+...
